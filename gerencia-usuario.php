@@ -23,15 +23,26 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php
-						while(true){
-					?>
+	<?php
+		require_once 'includes/conexao.php';
+		$sql = "SELECT * FROM tb_usuario";
+		$resultadoDaQuery = mysql_query($sql);
+		while ($linha = mysql_fetch_array ( $resultadoDaQuery )) {
+			//var_dump($linha);
+			$codigo 		= $linha['id_usuario'];
+			$nome 			= $linha['nome'];
+			$sobrenome 		= $linha['sobrenome'];
+			$dataNascimento = $linha['data_nascimento'];
+			$login 			= $linha['login'];
+			$senha 			= $linha['senha'];
+
+	?>
 					<tr>
-						<td>1</td>
-						<td>Marcelo</td>
-						<td>Terenciani</td>
-						<td>23-09-1991</td>
-						<td>terenciani</td>
+						<td><?=$codigo?></td>
+						<td><?=$nome?></td>
+						<td><?=$sobrenome?></td>
+						<td><?=$dataNascimento?></td>
+						<td><?=$login?></td>
 						<td> 
 							<a href="alterar.php" title="Alterar">
 								<span class="glyphicon glyphicon-edit icone-editar" aria-hidden="true"></span>
