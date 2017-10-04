@@ -1,3 +1,4 @@
+<?php require_once 'includes/protege.php';	?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +49,7 @@
 								<span class="glyphicon glyphicon-edit icone-editar" aria-hidden="true"></span>
 							</a>
 							|
-							<a href="excluir.php" title="Excluir">
+							<a href="excluir.php?id=<?=$codigo?>" title="Excluir">
 								<span class="glyphicon glyphicon-trash icone-excluir" aria-hidden="true"></span>
 							</a>
 							</td>
