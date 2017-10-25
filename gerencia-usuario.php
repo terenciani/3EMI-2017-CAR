@@ -45,7 +45,7 @@
 						<td><?=$dataNascimento?></td>
 						<td><?=$login?></td>
 						<td> 
-							<a href="alterar.php" title="Alterar">
+							<a href="alterar.php?id=<?=$codigo?>" title="Alterar">
 								<span class="glyphicon glyphicon-edit icone-editar" aria-hidden="true"></span>
 							</a>
 							|
